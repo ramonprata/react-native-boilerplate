@@ -7,11 +7,12 @@
       "",
       "interface ${1:ComponentName}Props {}",
       "",
-      "const ${1:ComponentName} = () => {",
+      "const ${1:ComponentName}: React.FC<${1:ComponentName}Props> = () => {",
       "  return <View />;",
       "};",
       "",
-      "export default ${1:ComponentName};"
+      "export default ${1:ComponentName};",
+      ""
     ]
   },
   "nativeStyledComponent": {

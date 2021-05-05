@@ -1,10 +1,10 @@
 import React from 'react';
 import { View } from 'react-native';
 
-interface FooSreenProps {}
+interface FooScreenProps {}
 
-const FooSreen = () => {
+const FooScreen: React.FC<FooScreenProps> = () => {
   return <View />;
 };
 
-export default FooSreen;
+export default FooScreen;
