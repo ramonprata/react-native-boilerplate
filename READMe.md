@@ -16,10 +16,14 @@
 - **Descriptions**
 
   - Each file describes its own purpose
+
     - _e.g_ `FooActions`
-      - ![](public/images/actionsDesc.PNG)
+
+      ![](public/images/actionsDesc.PNG)
+
     - _e.g_ `FooRepository`
-      - ![](public/images/repositoryDesc.PNG)
+
+      ![](public/images/repositoryDesc.PNG)
 
 - **src**
   - **folders**
