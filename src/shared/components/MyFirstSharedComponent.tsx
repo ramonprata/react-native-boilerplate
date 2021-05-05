@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
-const Container = styled.View`
+const FlexContainer = styled.View`
   // some css style
 `;
 
-export default Container;
+export default FlexContainer;
