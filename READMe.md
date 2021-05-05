@@ -17,15 +17,15 @@
 
   - **folders**
 
-    !(public/images/structureCollapsed.PNG)
+    ![](public/images/structureCollapsed.PNG)
 
   - feature detail
 
-    !(public/images/srcFeatureDetails.PNG)
+    ![](public/images/srcFeatureDetails.PNG)
 
   - shared detail
 
-    !(public/images/srcSharedDetails.PNG)
+    ![](public/images/srcSharedDetails.PNG)
 
 - **lint/formatter**
   - `.prettierrc.json`
