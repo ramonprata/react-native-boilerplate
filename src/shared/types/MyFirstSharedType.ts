@@ -1,7 +1,4 @@
-import styled from 'styled-components';
-
-const ComponentName = styled.Component`
-  // some css style
-`;
-
-export default ComponentName;
+/**
+ * Create a reusable type
+ */
+export {};
