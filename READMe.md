@@ -13,18 +13,6 @@
 
   - FeatureService: **FeatureRepository**
 
-- **Descriptions**
-
-  - Each file describes its own purpose
-
-    - _e.g_ `FooActions`
-
-      ![](public/images/actionsDesc.PNG)
-
-    - _e.g_ `FooRepository`
-
-      ![](public/images/repositoryDesc.PNG)
-
 - **src**
   - **folders**
     <img src="public/images/structureCollapsed.PNG">
@@ -41,5 +29,18 @@
   - **optional devDependencies**
     - @types/styled-components-react-native
 - **.vscode**
+
   - `react-native-ts.code-snippets`
   - `settings.json`
+
+- **Descriptions**
+
+  - Each file describes its own purpose
+
+    - _e.g_ `FooActions`
+
+      ![](public/images/actionsDesc.PNG)
+
+    - _e.g_ `FooRepository`
+
+      ![](public/images/repositoryDesc.PNG)
