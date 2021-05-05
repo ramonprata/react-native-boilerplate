@@ -19,11 +19,11 @@
 
     ![](public/images/structureCollapsed.PNG)
 
-  - feature detail
+  - **feature detail**
 
     ![](public/images/srcFeatureDetails.PNG)
 
-  - shared detail
+  - **shared detail**
 
     ![](public/images/srcSharedDetails.PNG)
 
