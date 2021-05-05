@@ -1,4 +1,4 @@
 /**
- * Use this to interact with APIs an DB
+ * Use this to interact with APIs and/or Local DB
  */
 export {};

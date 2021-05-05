@@ -13,12 +13,20 @@
 
   - FeatureService: **FeatureRepository**
 
+- **Descriptions**
+
+  - Each file describes its own purpose
+    - _e.g_ `FooActions`
+      <img src="public/images/actionsDesc.PNG">
+    - _e.g_ `FooRepository`
+      <img src="public/images/repositoryDesc.PNG">
+
 - **src**
   - **folders**
     <img src="public/images/structureCollapsed.PNG">
-  - feature detaila
+  - feature detail
     <img src="public/images/srcFeatureDetails.PNG">
-  - shared detaila
+  - shared detail
     <img src="public/images/srcSharedDetails.PNG">
 - **lint/formatter**
   - `.prettierrc.json`
