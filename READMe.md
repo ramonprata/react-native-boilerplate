@@ -17,9 +17,9 @@
 
   - Each file describes its own purpose
     - _e.g_ `FooActions`
-      <img src="public/images/actionsDesc.PNG">
+      ![](public/images/actionsDesc.PNG)
     - _e.g_ `FooRepository`
-      <img src="public/images/repositoryDesc.PNG">
+      ![](public/images/repositoryDesc.PNG)
 
 - **src**
   - **folders**
