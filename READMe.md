@@ -1,7 +1,8 @@
 ## React native boilerplate
 
 - src
-  - <img src="public/images/structureCollapsed.PNG">
+  - collapsed
+    - <img src="public/images/structureCollapsed.PNG">
 - lint/formatter
   - prettierrc
   - eslintrc
