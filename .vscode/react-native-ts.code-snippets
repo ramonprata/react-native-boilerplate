@@ -1,0 +1,31 @@
+// react native component
+{
+  "reactNativeComponent": {
+    "prefix": "tscomp",
+    "body": [
+      "import React from 'react';",
+      "import { View } from 'react-native';",
+      "",
+      "interface ${1:ComponentName}Props {}",
+      "",
+      "const ${1:ComponentName} = () => {",
+      "  return <View />;",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ]
+  },
+  "styledComponent": {
+    "prefix": "csscomp",
+    "body": [
+      "import styled from 'styled-components/native';",
+      "",
+      "const ${1:ComponentName} = styled.${2:Component}`",
+      "  // some css style",
+      "`;",
+      "",
+      "export default ${1:ComponentName};",
+      ""
+    ]
+  }
+}
