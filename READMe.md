@@ -14,12 +14,19 @@
   - FeatureService: **FeatureRepository**
 
 - **src**
+
   - **folders**
-    <img src="public/images/structureCollapsed.PNG">
+
+    !(public/images/structureCollapsed.PNG)
+
   - feature detail
-    <img src="public/images/srcFeatureDetails.PNG">
+
+    !(public/images/srcFeatureDetails.PNG)
+
   - shared detail
-    <img src="public/images/srcSharedDetails.PNG">
+
+    !(public/images/srcSharedDetails.PNG)
+
 - **lint/formatter**
   - `.prettierrc.json`
   - `.eslintrc.json`
