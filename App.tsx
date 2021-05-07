@@ -18,7 +18,9 @@ import {
 } from 'react-native';
 
 import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { Provider } from 'react-redux';
 import { Foo } from './src/features/foo';
+import store from './src/shared/store/store';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -28,12 +30,14 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <View style={styles.sectionContainer}>
-        <Foo />
-      </View>
-    </SafeAreaView>
+    <Provider store={store}>
+      <SafeAreaView style={backgroundStyle}>
+        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+        <View style={styles.sectionContainer}>
+          <Foo />
+        </View>
+      </SafeAreaView>
+    </Provider>
   );
 };
 

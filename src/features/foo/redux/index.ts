@@ -3,4 +3,4 @@
  */
 export * from './FooOperations';
 export * from './FooActions';
-export * from './FooReducer';
+export { default as fooReducer } from './FooReducer';
