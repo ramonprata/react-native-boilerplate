@@ -7,7 +7,7 @@ import { asyncActionDispatchParam } from '../redux';
 interface FooProps {}
 
 const Foo: React.FC<FooProps> = () => {
-  const state = useSelector((state: RootState) => state.foo)!;
+  const state = useSelector((state: RootState) => state.foo);
   const dispatch = useDispatch();
   // console.log('disptch :>> ', disptch);
   // console.log('store.dispatch :>> ', store.dispatch);
