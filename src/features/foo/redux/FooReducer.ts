@@ -2,17 +2,17 @@
  * Use this to setup FEATURE reducer
  */
 
-// old way - start
 import { SET_SHOW_FOO, SetShowFooAction } from './FooActions';
-interface ReducerState {
+export interface FooReducerState {
   showFoo: boolean;
 }
+
 // type ReducerActions = SetShowFooAction | AnotherActionType;
 type ReducerActions = SetShowFooAction;
 
-const initialState: ReducerState = { showFoo: false };
+const initialState: FooReducerState = { showFoo: false };
 
-export default (state = initialState, action: ReducerActions): ReducerState => {
+export default (state = initialState, action: ReducerActions): FooReducerState => {
   switch (action.type) {
     case SET_SHOW_FOO:
       return { ...state, showFoo: action.payload };
@@ -21,4 +21,3 @@ export default (state = initialState, action: ReducerActions): ReducerState => {
       return state;
   }
 };
-// old way - end
