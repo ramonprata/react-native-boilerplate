@@ -12,7 +12,7 @@ import { FooManager } from '../service/FooManager';
 type SetFooAsyncThunkType = DefaultActionTypeThunk;
 
 // using thunk
-export const asyncActionThunk = (showFoo: boolean): SetFooAsyncThunkType => async dispatch => {
+export const asyncActionThunk = (showFoo: boolean): SetFooAsyncThunkType => async (dispatch) => {
   const fooManger = new FooManager();
   const asyncResp = await fooManger.getMydata(showFoo);
   dispatch(setFoo(asyncResp));
@@ -28,7 +28,7 @@ export const asyncActionStoreDispatch = async (showFoo: boolean): Promise<void> 
 // getting dispatch from params
 export const asyncActionDispatchParam = async (
   showFoo: boolean,
-  dispatch: Dispatch,
+  dispatch: Dispatch
 ): Promise<void> => {
   const fooManger = new FooManager();
   const asyncResp = await fooManger.getMydata(showFoo);

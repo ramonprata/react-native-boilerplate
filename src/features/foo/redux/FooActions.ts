@@ -11,6 +11,7 @@ export interface SetShowFooAction {
   payload: boolean;
 }
 
-export const setFoo = (showFoo: boolean): SetShowFooAction => {
-  return { type: SET_SHOW_FOO, payload: showFoo };
-};
+export const setFoo = (showFoo: boolean): SetShowFooAction => ({
+  type: SET_SHOW_FOO,
+  payload: showFoo,
+});

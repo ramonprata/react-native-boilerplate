@@ -14,7 +14,8 @@
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/no-shadow": "off",
-    "@typescript-eslint/comma-dangle": "off"
+    "@typescript-eslint/comma-dangle": "off",
+    "class-methods-use-this": "warn"
   },
   "parserOptions": {
     "project": "./tsconfig.eslint.json"

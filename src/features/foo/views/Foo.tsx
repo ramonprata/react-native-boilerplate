@@ -20,7 +20,14 @@ const Foo: React.FC<FooProps> = () => {
     asyncActionDispatchParam(true, dispatch);
   }, [dispatch]);
 
-  return <View>{<Text>Foo: {String(state.showFoo)}</Text>}</View>;
+  return (
+    <View>
+      <Text>
+        Foo:
+        {String(state.showFoo)}
+      </Text>
+    </View>
+  );
 };
 
 export default Foo;
