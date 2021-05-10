@@ -10,6 +10,7 @@
     "import/extensions": "off",
     "import/no-unresolved": "off",
     "space-infix-ops": "error",
+    "class-methods-use-this": "warn",
     "@typescript-eslint/no-loop-func": "error",
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-use-before-define": "off",

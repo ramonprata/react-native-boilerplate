@@ -19,7 +19,8 @@ const updateShowFooAsync = createAsyncThunk(
 
 const updateShowFoo = {
   operation: updateShowFooAsync,
-  fulfilled: updateShowFooAsync.fulfilled.toString(), // TODO: create a reusable function in utils to get status as strings
+  // TODO: create a reusable function in utils to get status as strings
+  fulfilled: updateShowFooAsync.fulfilled.toString(),
   pending: updateShowFooAsync.pending.toString(),
   rejected: updateShowFooAsync.rejected.toString(),
 };
