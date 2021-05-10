@@ -9,10 +9,8 @@ import { FooManager } from '../service/FooManager';
 
 export const updateShowFooAsync = createAsyncThunk(
   'foo/updateShowFooAsync',
-  async (showFoo: boolean, thunkAPI) => {
-    // console.log('thunkAPI :>> ', thunkAPI);
-    const fooManager = new FooManager();
-    const response = await fooManager.getMydata(showFoo);
+  async (showFoo: boolean) => {
+    const response = await FooManager.getMydata(showFoo);
     return response;
   }
 );

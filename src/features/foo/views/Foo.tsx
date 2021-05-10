@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import { View, Text } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../shared/store/reduxStore';
-import { updateShowFoo, updateShowFooAsync, setShowFoo } from '../redux';
+import { updateShowFoo } from '../redux';
 
 interface FooProps {}
 
 const Foo: React.FC<FooProps> = () => {
-  const state = useSelector((state: RootState) => state.foo);
+  const fooState = useSelector((state: RootState) => state.foo);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -18,11 +18,11 @@ const Foo: React.FC<FooProps> = () => {
     <View>
       <Text>
         Foo:
-        {String(state.showFoo)}
+        {String(fooState.showFoo)}
       </Text>
       <Text>
         Loading:
-        {String(state.loading)}
+        {String(fooState.loading)}
       </Text>
     </View>
   );
