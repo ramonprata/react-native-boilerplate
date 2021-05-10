@@ -8,7 +8,6 @@ export interface FooReducerState {
   showFoo: boolean;
 }
 
-// type ReducerActions = SetShowFooAction | AnotherActionType;
 type ReducerActions = SetShowFooAction;
 
 const initialState: FooReducerState = { showFoo: false };

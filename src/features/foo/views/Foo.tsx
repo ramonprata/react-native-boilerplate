@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { View, Text } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../../shared/store/reduxStore';
-import { asyncActionDispatchParam } from '../redux';
+import { RootState } from '../../../shared/store';
+import { asyncActionDispatchParam, asyncActionStoreDispatch, asyncActionThunk } from '../redux';
 
 interface FooProps {}
 
@@ -15,9 +15,9 @@ const Foo: React.FC<FooProps> = () => {
   // console.log('state :>> ', state);
 
   useEffect(() => {
-    // dispatch(asyncActionThunk(true)); // using thunk
+    dispatch(asyncActionThunk(true)); // using thunk
     // asyncActionStoreDispatch(true); // without store.dispatch
-    asyncActionDispatchParam(true, dispatch);
+    // asyncActionDispatchParam(true, dispatch);
   }, [dispatch]);
 
   return (
