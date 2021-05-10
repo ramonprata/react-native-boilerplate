@@ -3,7 +3,7 @@
  */
 
 import { Dispatch } from 'redux';
-import store from '../../../shared/store/reduxStore';
+import store from '../../../shared/store';
 import { DefaultActionTypeThunk } from '../../../shared/types';
 import { setFoo } from './FooActions';
 import { FooManager } from '../service/FooManager';

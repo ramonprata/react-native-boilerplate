@@ -1,12 +1,9 @@
-import { combineReducers, createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import { fooReducer, FOO_REDUCER_NAME } from '../../features/foo/redux';
+import { combineReducers } from 'redux';
+import fooReducer from '../../features/foo/redux/FooReducer';
+import { FOO_REDUCER_NAME } from '../../features/foo/redux/FooActions';
 
 const reducers = combineReducers({
   [FOO_REDUCER_NAME]: fooReducer,
 });
 
-const store = createStore(reducers, applyMiddleware(thunk));
-
-export type RootState = ReturnType<typeof store.getState>;
-export default store;
+export default reducers;

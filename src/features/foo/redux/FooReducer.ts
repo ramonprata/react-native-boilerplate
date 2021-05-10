@@ -3,6 +3,7 @@
  */
 
 import { SET_SHOW_FOO, SetShowFooAction } from './FooActions';
+
 export interface FooReducerState {
   showFoo: boolean;
 }
