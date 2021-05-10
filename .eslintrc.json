@@ -15,7 +15,8 @@
     "object-propetry-newline": "off",
     "no-param-reassign": "off",
     "import/prefer-default-export": "off",
-    "@typescript-eslint/comma-dangle": "off"
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/indent": "off"
   },
   "parserOptions": {
     "project": "./tsconfig.eslint.json"

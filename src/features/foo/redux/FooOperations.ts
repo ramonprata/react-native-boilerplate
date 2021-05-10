@@ -3,9 +3,8 @@
  */
 
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { getOperationStatus } from '../../../shared/utils';
 import { FooManager } from '../service/FooManager';
-
-// TODO: see thunkAPI params: https://redux-toolkit.js.org/api/createAsyncThunk
 
 export const updateShowFooAsync = createAsyncThunk(
   'foo/updateShowFooAsync',
@@ -15,12 +14,6 @@ export const updateShowFooAsync = createAsyncThunk(
   }
 );
 
-// TODO: create a reusable function in utils to get status as strings
-const updateShowFoo = {
-  operation: updateShowFooAsync,
-  fulfilled: updateShowFooAsync.fulfilled.toString(),
-  pending: updateShowFooAsync.pending.toString(),
-  rejected: updateShowFooAsync.rejected.toString(),
-};
+const updateShowFoo = getOperationStatus(updateShowFooAsync);
 
 export { updateShowFoo };
