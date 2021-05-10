@@ -1,12 +1,11 @@
-import { combineReducers, createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import { fooReducer, FOO_REDUCER_NAME } from '../../features/foo/redux';
+import { configureStore } from '@reduxjs/toolkit';
+import { fooSlice, FOO_REDUCER_NAME } from '../../features/foo/redux';
 
-const reducers = combineReducers({
-  [FOO_REDUCER_NAME]: fooReducer,
-});
+const reducer = {
+  [FOO_REDUCER_NAME]: fooSlice.reducer,
+};
 
-const store = createStore(reducers, applyMiddleware(thunk));
+const store = configureStore({ reducer });
 
 export type RootState = ReturnType<typeof store.getState>;
 export default store;

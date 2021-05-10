@@ -3,6 +3,5 @@
  */
 
 export * from './FooOperations';
-export * from './FooActions';
-export * from './FooReducer';
-export { default as fooReducer } from './FooReducer';
+export * from './FooSlice';
+export { default as fooSlice } from './FooSlice';

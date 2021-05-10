@@ -2,35 +2,19 @@
  * Use this to setup FEATURE operations and dispatch actions
  */
 
-import { Dispatch } from 'redux';
-import store from '../../../shared/store/reduxStore';
-import { DefaultActionTypeThunk } from '../../../shared/types';
-import { setFoo } from './FooActions';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 import { FooManager } from '../service/FooManager';
 
-// Redux-Thunk action
-type SetFooAsyncThunkType = DefaultActionTypeThunk;
+// TODO: see thunkAPI params: https://redux-toolkit.js.org/api/createAsyncThunk
 
-// using thunk
-export const asyncActionThunk = (showFoo: boolean): SetFooAsyncThunkType => async dispatch => {
-  const fooManger = new FooManager();
-  const asyncResp = await fooManger.getMydata(showFoo);
-  dispatch(setFoo(asyncResp));
-};
+const setShowFooAsync = createAsyncThunk(
+  'foo/setShowFooAsync',
+  async (showFoo: boolean, thunkAPI) => {
+    console.log('thunkAPI :>> ', thunkAPI);
+    const fooManager = new FooManager();
+    const response = await fooManager.getMydata(showFoo);
+    return response;
+  },
+);
 
-// using store.dispatch
-export const asyncActionStoreDispatch = async (showFoo: boolean): Promise<void> => {
-  const fooManger = new FooManager();
-  const asyncResp = await fooManger.getMydata(showFoo);
-  store.dispatch(setFoo(asyncResp));
-};
-
-// getting dispatch from params
-export const asyncActionDispatchParam = async (
-  showFoo: boolean,
-  dispatch: Dispatch,
-): Promise<void> => {
-  const fooManger = new FooManager();
-  const asyncResp = await fooManger.getMydata(showFoo);
-  dispatch(setFoo(asyncResp));
-};
+export { setShowFooAsync };
