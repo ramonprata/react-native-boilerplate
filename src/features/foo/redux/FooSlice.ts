@@ -16,7 +16,6 @@ const fooSlice = createSlice({
   },
   extraReducers: {
     [setShowFooSuccess]: (state, action) => {
-      // Add user to the state array
       state.showFoo = action.payload;
     },
   },
