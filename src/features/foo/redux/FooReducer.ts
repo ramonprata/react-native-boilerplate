@@ -3,6 +3,7 @@
  */
 
 import { PayloadAction } from '@reduxjs/toolkit';
+
 export interface FooReducerState {
   showFoo: boolean;
 }

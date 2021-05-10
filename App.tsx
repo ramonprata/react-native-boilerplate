@@ -5,7 +5,6 @@
  * Generated with the TypeScript template
  * https://github.com/react-native-community/react-native-template-typescript
  *
- * @format
  */
 
 import React from 'react';
@@ -18,7 +17,6 @@ import store from './src/shared/store/reduxStore';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
-
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
