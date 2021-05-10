@@ -1,8 +1,22 @@
 {
   "root": true,
-  "extends": ["@react-native-community"],
+  "extends": ["@react-native-community", "airbnb-typescript"],
   "rules": {
+    "linebreak-style": "off",
+    "object-curly-newline": "off",
+    "object-propetry-newline": "off",
+    "no-param-reassign": "warn",
+    "import/prefer-default-export": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "space-infix-ops": "error",
+    "@typescript-eslint/no-loop-func": "error",
     "@typescript-eslint/no-unused-vars": "warn",
-    "no-shadow": "off"
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "@typescript-eslint/comma-dangle": "off"
+  },
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
   }
 }
