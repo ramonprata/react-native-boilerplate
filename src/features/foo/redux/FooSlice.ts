@@ -1,11 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { FooReducerState, setShowFooReducer } from './FooReducer';
+import { FooReducerState, setShowFooReducer, setShowLoadingReducer } from './FooReducer';
 import { updateShowFoo } from './FooOperations';
 
-const FOO_REDUCER_NAME = 'foo';
+export const FOO_REDUCER_NAME = 'foo';
 
 const initialState: FooReducerState = {
   showFoo: false,
+  loading: false,
 };
 
 const fooSlice = createSlice({
@@ -16,6 +17,7 @@ const fooSlice = createSlice({
   },
   extraReducers: {
     [updateShowFoo.fulfilled]: setShowFooReducer,
+    [updateShowFoo.pending]: setShowLoadingReducer,
   },
 });
 

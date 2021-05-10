@@ -7,7 +7,7 @@ import { FooManager } from '../service/FooManager';
 
 // TODO: see thunkAPI params: https://redux-toolkit.js.org/api/createAsyncThunk
 
-const updateShowFooAsync = createAsyncThunk(
+export const updateShowFooAsync = createAsyncThunk(
   'foo/updateShowFooAsync',
   async (showFoo: boolean, thunkAPI) => {
     // console.log('thunkAPI :>> ', thunkAPI);
@@ -17,9 +17,9 @@ const updateShowFooAsync = createAsyncThunk(
   }
 );
 
+// TODO: create a reusable function in utils to get status as strings
 const updateShowFoo = {
   operation: updateShowFooAsync,
-  // TODO: create a reusable function in utils to get status as strings
   fulfilled: updateShowFooAsync.fulfilled.toString(),
   pending: updateShowFooAsync.pending.toString(),
   rejected: updateShowFooAsync.rejected.toString(),

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { View, Text } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../shared/store/reduxStore';
-import { updateShowFoo } from '../redux';
+import { updateShowFoo, updateShowFooAsync, setShowFoo } from '../redux';
 
 interface FooProps {}
 
@@ -19,6 +19,10 @@ const Foo: React.FC<FooProps> = () => {
       <Text>
         Foo:
         {String(state.showFoo)}
+      </Text>
+      <Text>
+        Loading:
+        {String(state.loading)}
       </Text>
     </View>
   );
