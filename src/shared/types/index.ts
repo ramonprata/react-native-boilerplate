@@ -1,1 +1,3 @@
-export * from './DefaultThunkActionType';
+// export * from './MyFirstSharedType';
+
+export {};

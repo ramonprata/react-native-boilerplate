@@ -1,13 +1,11 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { fooSlice } from '../../features/foo/redux';
+/**
+ * Use this to setup redux store
+ */
 
-const reducer = {
-  [fooSlice.name]: fooSlice.reducer,
-};
+import { createStore } from 'redux';
 
-const store = configureStore({
-  reducer,
-});
+const someReducer = () => {};
 
-export type RootState = ReturnType<typeof store.getState>;
+const store = createStore(someReducer);
+
 export default store;

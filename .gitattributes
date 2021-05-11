@@ -1,3 +1,7 @@
 # Windows files should use crlf line endings
 # https://help.github.com/articles/dealing-with-line-endings/
-*.bat text eol=crlf
+*.bat   ext eol=crlf
+*.js    text eol=lf
+*.json  text eol=lf
+*.ts    text eol=lf
+*.tsx   text eol=lf

@@ -21,6 +21,7 @@ const App = () => {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  /* eslint-disable @typescript-eslint/no-use-before-define */
   return (
     <Provider store={store}>
       <SafeAreaView style={backgroundStyle}>
