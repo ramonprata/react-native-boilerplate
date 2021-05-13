@@ -5,4 +5,4 @@
         <domain includeSubdomains="true">localhost</domain>
     </domain-config>
 </network-security-config>
-<!-- TODO: setup detox -->
+<!-- Setup e2e Detox -->

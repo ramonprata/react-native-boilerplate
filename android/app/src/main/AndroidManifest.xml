@@ -1,4 +1,4 @@
-<!-- TODO: setup detox android:networkSecurityConfig -->
+<!-- Setup e2e Detox android:networkSecurityConfig -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="com.boilerplate">
 

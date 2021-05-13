@@ -1,4 +1,4 @@
-// TODO: setup detox
+// Setup e2e Detox
 package com.boilerplate;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;

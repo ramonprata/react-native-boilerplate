@@ -78,7 +78,7 @@ import com.android.build.OutputFile
  */
 
 project.ext.react = [
-    enableHermes: true,  // clean and rebuild if changing TODO: setup detox
+    enableHermes: true,  // clean and rebuild if changing Setup e2e Detox
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -96,7 +96,7 @@ def enableSeparateBuildPerCPUArchitecture = false
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
  */
-def enableProguardInReleaseBuilds = true // TODO: setup detox
+def enableProguardInReleaseBuilds = true // Setup e2e Detox
 
 
 /**
@@ -137,9 +137,9 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        testBuildType System.getProperty('testBuildType', 'debug')  // This will later be used to control the test apk build type TODO: setup detox
-        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner' // TODO: setup detox
-        missingDimensionStrategy 'detox', 'full' // TODO: setup detox
+        testBuildType System.getProperty('testBuildType', 'debug')  // This will later be used to control the test apk build type Setup e2e Detox
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner' // Setup e2e Detox
+        missingDimensionStrategy 'detox', 'full' // Setup e2e Detox
     }
     splits {
         abi {
@@ -215,7 +215,7 @@ dependencies {
         implementation jscFlavor
     }
 
-    androidTestImplementation('com.wix:detox:+') // TODO: setup detox
+    androidTestImplementation('com.wix:detox:+') // Setup e2e Detox
 
 }
 
