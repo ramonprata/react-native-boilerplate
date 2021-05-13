@@ -20,5 +20,6 @@
   },
   "parserOptions": {
     "project": "./tsconfig.eslint.json"
-  }
+  },
+  "ignorePatterns": ["**/e2e/*.js"]
 }
