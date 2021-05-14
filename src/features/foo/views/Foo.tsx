@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import { View, Text } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
+import { View, Text } from 'react-native';
 import { RootState } from '../../../shared/store/reduxStore';
 import { updateShowFoo } from '../redux';
+import { ComponentNameOne } from './FooStyledComponents';
 
 interface FooProps {}
 
@@ -15,7 +16,7 @@ const Foo: React.FC<FooProps> = () => {
   }, [dispatch]);
 
   return (
-    <View>
+    <View testID="fooScreen">
       <Text>
         Foo:
         {String(fooState.showFoo)}
@@ -24,6 +25,7 @@ const Foo: React.FC<FooProps> = () => {
         Loading:
         {String(fooState.loading)}
       </Text>
+      <ComponentNameOne />
     </View>
   );
 };

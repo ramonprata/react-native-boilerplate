@@ -51,3 +51,7 @@
     - _e.g_ `FooRepository`
 
       ![](public/images/repositoryDesc.PNG)
+
+### Packages
+- **Detox**
+  - [e2e-tests](https://github.com/wix/Detox/blob/master/docs/Introduction.GettingStarted.md)

@@ -78,7 +78,7 @@ import com.android.build.OutputFile
  */
 
 project.ext.react = [
-    enableHermes: false,  // clean and rebuild if changing
+    enableHermes: true,  // clean and rebuild if changing Setup e2e Detox
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -96,7 +96,8 @@ def enableSeparateBuildPerCPUArchitecture = false
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
  */
-def enableProguardInReleaseBuilds = false
+def enableProguardInReleaseBuilds = true // Setup e2e Detox
+
 
 /**
  * The preferred build flavor of JavaScriptCore.
@@ -136,6 +137,9 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        testBuildType System.getProperty('testBuildType', 'debug')  // This will later be used to control the test apk build type Setup e2e Detox
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner' // Setup e2e Detox
+        missingDimensionStrategy 'detox', 'full' // Setup e2e Detox
     }
     splits {
         abi {
@@ -210,6 +214,9 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+
+    androidTestImplementation('com.wix:detox:+') // Setup e2e Detox
+
 }
 
 // Run this once to be able to run the application with BUCK
