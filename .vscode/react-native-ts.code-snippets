@@ -27,5 +27,28 @@
       "export default ${1:ComponentName};",
       ""
     ]
+  },
+  
+  "detox e2e Test": {
+    "prefix": "e2etest",
+    "body": [
+      "/* eslint-env detox/detox, mocha */",
+      "",
+      "describe('Example', () => {",
+      "  beforeAll(async () => {",
+      "    await device.launchApp({ newInstance: true });",
+      "  });",
+      "",
+      "  beforeEach(async () => {",
+      "    await device.reloadReactNative();",
+      "  });",
+      "",
+      "  it('should...', async () => {",
+      "    await expect(element(by.id('${0:testID}'))).toBeVisible();",
+      "  });",
+      "});",
+      ""
+    ],
+    "description": ""
   }
 }

@@ -1,6 +1,8 @@
+/* eslint-env detox/detox, mocha */
+
 describe('Example', () => {
   beforeAll(async () => {
-    await device.launchApp();
+    await device.launchApp({ newInstance: true });
   });
 
   beforeEach(async () => {
