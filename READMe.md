@@ -55,3 +55,6 @@
 ### Packages
 - **Detox**
   - [e2e-tests](https://github.com/wix/Detox/blob/master/docs/Introduction.GettingStarted.md)
+  - https://emasuriano.medium.com/end-to-end-testing-in-react-native-with-detox-53b27fe9168a
+  - https://blog.logrocket.com/end-to-end-testing-in-react-native-with-detox/
+  - https://www.youtube.com/watch?v=q2hmTMORMHc&ab_channel=Pluralsight

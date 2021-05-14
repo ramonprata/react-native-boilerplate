@@ -1,7 +1,7 @@
 {
   "root": true,
   "extends": ["@react-native-community", "airbnb-typescript"],
-  "plugins": ["detox"],
+  "plugins": ["jest"],
   "rules": {
     "import/extensions": "error",
     "import/no-unresolved": "error",
@@ -22,5 +22,15 @@
   "parserOptions": {
     "project": "./tsconfig.eslint.json"
   },
-  "ignorePatterns": ["**/e2e/*.js"]
+  "overrides": [
+    {
+      "files": [
+        "*.e2e.js"
+      ],
+      "env": {
+        "detox/detox": true,
+        "jest": true
+      }
+    }
+  ]
 }
