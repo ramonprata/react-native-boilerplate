@@ -4,6 +4,7 @@ import { View, Text } from 'react-native';
 import { RootState } from '../../../shared/store/reduxStore';
 import { updateShowFoo } from '../redux';
 import { ComponentNameOne } from './FooStyledComponents';
+import { Singleton } from '../../../shared/base/api/APIInstances';
 
 interface FooProps {}
 
@@ -12,6 +13,9 @@ const Foo: React.FC<FooProps> = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    const a = new Singleton();
+    const b = new Singleton();
+    console.log('equal :>> ', a === b);
     dispatch(updateShowFoo.operation(true));
   }, [dispatch]);
 
