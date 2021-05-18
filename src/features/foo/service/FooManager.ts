@@ -16,8 +16,12 @@ export class FooManager extends BaseManager {
   public async getFooData() {
     try {
       const repo = new FooRepository();
-      return await repo.getFooData();
+      const data = await repo.getFooData();
+      return data;
     } catch (error) {
+      console.log('error status:>> ', error.status);
+      console.log('error responseError:>> ', error.responseError);
+      console.log('error requestError:>> ', error.requestError);
       return this.handleError(error);
     }
   }

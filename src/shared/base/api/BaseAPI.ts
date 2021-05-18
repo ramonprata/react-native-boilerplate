@@ -24,7 +24,10 @@ abstract class BaseAPI {
     return config;
   };
 
-  private handleResponse = ({ data }: AxiosResponse) => data;
+  private handleResponse = ({ data }: AxiosResponse) => {
+    console.log('data :>> ', data);
+    return data;
+  };
 
   protected handleError = (error: AxiosError): Promise<IHttpError> => {
     if (error.response) {
@@ -44,15 +47,15 @@ abstract class BaseAPI {
         status: ReqResStatusError.UNKNOWN_ERROR.status,
         error: error.toJSON(),
       });
+    } else {
+      // Something happened in setting up the request that triggered an Error
+      return Promise.reject<IHttpError>({
+        requestError: false,
+        responseError: false,
+        status: ReqResStatusError.UNKNOWN_ERROR.status,
+        error: error.toJSON(),
+      });
     }
-    // Something happened in setting up the request that triggered an Error
-    return Promise.reject<IHttpError>({
-      requestError: false,
-      responseError: false,
-      status: ReqResStatusError.UNKNOWN_ERROR.status,
-      error: error.toJSON(),
-    });
-    // console.log(error.config);
   };
 }
 

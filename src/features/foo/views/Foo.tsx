@@ -13,7 +13,7 @@ const Foo: React.FC<FooProps> = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    loadFooData.run();
+    dispatch(loadFooData.run());
   }, []);
 
   useEffect(() => {

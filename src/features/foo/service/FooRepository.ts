@@ -12,8 +12,8 @@ class FooRepository {
     this.apiX = new APIX();
   }
 
-  getFooData() {
-    return this.apiX.instance.get<IPost[]>('/posts');
+  async getFooData() {
+    return this.apiX.instance.get<IPost[]>('/posts?_limit=1');
   }
 }
 

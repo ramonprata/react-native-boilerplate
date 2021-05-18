@@ -15,9 +15,13 @@ class APIX extends BaseAPI {
   }
 
   static getAPIXConfig(): AxiosRequestConfig {
+    // set other properties headers, timeout, auth..
     return {
       baseURL: Config.APIX_BASE_URL,
-      // set other properties headers, timeout, auth..
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        Accept: 'application/json',
+      },
     };
   }
 }
