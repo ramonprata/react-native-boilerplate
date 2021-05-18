@@ -3,12 +3,12 @@
  */
 
 import { AsyncThunk } from '@reduxjs/toolkit';
-import { OperationReducer } from '../types';
+import { IOperationReducer } from '../types';
 
 export const getOperationStatus = <T extends AsyncThunk<any, any, any>>(
   asyncThunkFunction: T
-): OperationReducer<T> => ({
-  operation: asyncThunkFunction,
+): IOperationReducer<T> => ({
+  run: asyncThunkFunction,
   fulfilled: asyncThunkFunction.fulfilled.toString(),
   pending: asyncThunkFunction.pending.toString(),
   rejected: asyncThunkFunction.rejected.toString(),

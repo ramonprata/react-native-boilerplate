@@ -1,28 +1,59 @@
 /**
  * Use this to create generic/reusable API instances, API calls, API interceptors
  */
-import axios, { AxiosInstance, AxiosResponse } from 'axios';
+import axios, { AxiosInstance, AxiosResponse, AxiosRequestConfig, AxiosError } from 'axios';
+import ReqResStatusError from '../../constants/ReqResStatusError';
+import { IHttpError } from '../../types';
 
-declare module 'axios' {
-  interface AxiosResponse<T = any> extends Promise<T> {}
-}
+abstract class BaseAPI {
+  // protected readonly instance: AxiosInstance;
+  public readonly instance: AxiosInstance;
 
-abstract class HttpClient {
-  protected readonly instance: AxiosInstance;
-
-  public constructor(baseURL: string) {
-    this.instance = axios.create({
-      baseURL,
-    });
-
-    this._initializeResponseInterceptor();
+  public constructor(instanceConfig: AxiosRequestConfig) {
+    this.instance = axios.create(instanceConfig);
+    this.initializeResponseInterceptor();
   }
 
-  private _initializeResponseInterceptor = () => {
-    this.instance.interceptors.response.use(this._handleResponse, this._handleError);
+  private initializeResponseInterceptor = () => {
+    this.instance.interceptors.response.use(this.handleResponse, this.handleError);
+    this.instance.interceptors.request.use(this.handleRequest);
   };
 
-  private _handleResponse = ({ data }: AxiosResponse) => data;
+  private handleRequest = (config: AxiosRequestConfig) => {
+    // do something
+    return config;
+  };
 
-  protected _handleError = (error: any) => Promise.reject(error);
+  private handleResponse = ({ data }: AxiosResponse) => data;
+
+  protected handleError = (error: AxiosError): Promise<IHttpError> => {
+    if (error.response) {
+      // The request was made and the server responded with a status code
+      // that falls out of the range of 2xx
+      return Promise.reject<IHttpError>({
+        requestError: false,
+        responseError: true,
+        status: error.response.status.toString(),
+        error: error.toJSON(),
+      });
+    } else if (error.request) {
+      // The request was made but no response was received
+      return Promise.reject<IHttpError>({
+        requestError: true,
+        responseError: false,
+        status: ReqResStatusError.UNKNOWN_ERROR.status,
+        error: error.toJSON(),
+      });
+    }
+    // Something happened in setting up the request that triggered an Error
+    return Promise.reject<IHttpError>({
+      requestError: false,
+      responseError: false,
+      status: ReqResStatusError.UNKNOWN_ERROR.status,
+      error: error.toJSON(),
+    });
+    // console.log(error.config);
+  };
 }
+
+export default BaseAPI;
