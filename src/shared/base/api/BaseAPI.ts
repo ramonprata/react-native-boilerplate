@@ -25,7 +25,6 @@ abstract class BaseAPI {
   };
 
   private handleResponse = ({ data }: AxiosResponse) => {
-    console.log('data :>> ', data);
     return data;
   };
 
