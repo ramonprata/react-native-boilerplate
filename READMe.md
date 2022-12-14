@@ -5,7 +5,12 @@
 - [Feature responsability - Article](https://ramonprata.medium.com/react-controle-de-estado-vamos-organizar-a065e0f5e82c)
 - [Feature responsability - GitHub](https://github.com/ramonprata/structure_react_redux_app)
 
-### Base Architecture
+
+### Base Architecture - New version state management state agnostic(redux tool kit, zustand, etc)
+
+![](https://github.com/ramonprata/structure_react_redux_app/blob/master/imagesReadme/feature-zoom-in.PNG?raw=true)
+
+### Base Architecture - old with redux
 
 ![](https://github.com/ramonprata/structure_react_redux_app/blob/master/imagesReadme/structure.png?raw=true)
 
